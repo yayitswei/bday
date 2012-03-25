@@ -8,6 +8,7 @@
 
 @video-width: 500px;
 @video-height: 360px;
+@block-height: 620px;
 
 body {
   background: white;
@@ -60,7 +61,7 @@ h3 {
   position: relative;
   margin: 0;
   width: 100%;
-  height: 620px;
+  height: @block-height;
   text-align: center;
 
   &#page1 {
@@ -95,7 +96,7 @@ h3 {
 #videocontainercontainer {
   position: absolute;
   width: 100%;
-  top: 20px;
+  top: (@block-height - @video-height) / 2;
   left: 0px;
   text-align: center;
 }
