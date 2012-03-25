@@ -10,6 +10,23 @@
 </head>
 <body>
 
+<script>
+  $(document).ready(function() {
+    var scrollorama = $.scrollorama({
+      blocks:'.scrollblock',
+      enablePin:false
+    });
+
+    scrollorama.animate('#videocover',{
+      duration:200,
+      delay: 450,
+      property:'opacity',
+      start:1,
+      end:0
+    });
+  });
+</script>
+
 <div class='scrollblock' id='page1'>
 	<div style='position:absolute; top:90px; width:100%; text-align:center;'>
 	  <img src="pics/cake.png" style='position:relative;' float:left;>
@@ -22,12 +39,22 @@
 </div>
 
 <div class='scrollblock' id='page3'>
-<iframe width="720" height="520"
-          style='top:150px;'
-          src="http://www.youtube.com/embed/Y2E9IMfz3RU?rel=0"
-          frameborder="0"
-          allowfullscreen>
-  </iframe>
+  <div id='videocontainercontainer'>
+    <div id='videocontainer'>
+      <div id='videocover'>
+        <img src='pics/piano/1.png' id='piano1'/>
+        <img src='pics/piano/2.png' id='piano2'/>
+        <img src='pics/piano/3.png' id='piano3'/>
+        <img src='pics/piano/4.png' id='piano4'/>
+      </div>
+      <iframe id='video'
+              width="720" height="520"
+              src="http://www.youtube.com/embed/Y2E9IMfz3RU?wmode=opaque"
+              frameborder="0"
+              allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 </div>
 
 <div class='scrollblock' id='page4'>
@@ -35,17 +62,14 @@
 </div>
 
 <div class='scrollblock' id='page5'>
-	<div class="letter">
-		Dear Dawn,
-
-		<br><br>I hope you have a wonderful birthday. 
-		<br>You are now twenty five years old.
-		<br>I made you this beautiful website.
-		<br>I hope you spend five hours on it.
-
-		<br><br>Love, Wei
-	</div>
-
+  <div class="letter">
+    Dear Dawn,
+    <br><br>I hope you have a wonderful birthday. 
+    <br>You are now twenty five years old.
+    <br>I made you this beautiful website.
+    <br>I hope you spend five hours on it.
+    <br><br>Love, Wei
+  </div>
 </div>
 
 <div class='scrollblock' id='page6'>
