@@ -4,17 +4,19 @@
 @lightgrey: #F1F1F1;
 @green: #A8C41A;
 @darkgrey: #333333;
+@lightbeige: #FCFAF2;
 
 
 body {
   background: white;
   font-family: 'Crimson Text', 'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
-  font-size: 30px;
+  font-size: 26px;
   color: @darkgrey;
   padding: 0;
   margin: 0;
   text-align: center;
+  vertical-align: baseline;
 }
 
 h1 {
@@ -42,6 +44,16 @@ h3 {
  font-family: 'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.letter {
+  
+  text-align: left;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: bottom;
+
+}
+
 .scrollblock {
   overflow: hidden;
   position: relative;
@@ -63,14 +75,19 @@ h3 {
   }
 
   &#page4 {
-    background: @blue;
-  }
-
-  &#page5 {
     background: @lightgrey;
   }
 
+  &#page5 {
+    background: @lightbeige;
+  }
+
   &#page6 {
+    background: @blue;
+  }
+
+  &#page7 {
     background: @green;
   }
 }
+
