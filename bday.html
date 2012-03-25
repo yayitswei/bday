@@ -26,16 +26,30 @@
     });
 
 	// animate the parallaxing
-	scrollorama.animate('#date',{ delay: 0, duration: 400, property:'top', start:320, end:-520 });
+	scrollorama.animate('#date',{ delay: 0, duration: 400, property:'top', start:320, end:0 });
+	scrollorama.animate('#cake1',{ delay: 0, duration: 500, property:'top', start:0, end:-520 });
+	scrollorama.animate('#cake2',{ delay: 0, duration: 500, property:'top', start:820, end:-520 });
+	scrollorama.animate('#cake3',{ delay: 20, duration: 600, property:'top', start:820, end:-520 });
+	
+	
 
   });
 </script>
 
 <div class='scrollblock' id='page1'>
 	<div style='position:absolute; top:90px; width:100%; text-align:center;'>
-		<img src="pics/cake.png" style='position:relative;'>
+		<img id="cake1" src="pics/cake.png" style='position:relative;'>
 		<h1 id="date" style='position:absolute;'>APRIL 8</H1>
 	</div>
+	
+	<div style='text-align:left; padding-left:80px;'>
+		<img id="cake2" src="pics/cake2.png" style='position:relative;'>
+	</div>
+	
+	<div style='text-align:right; padding-right:80px;'>
+		<img id="cake3" src="pics/cake3.png" style='position:relative;'>
+	</div>
+	
 </div>
 
 <div class='scrollblock' id='page2'>
@@ -62,7 +76,7 @@
 </div>
 
 <div class='scrollblock' id='page4'>
-  <img src="pics/oysters.jpg" width=100% style='position:absolute;top:-120px;left:0px'/>
+  <img src="pics/oysters.jpg" width=100% style='position:absolute;top:-100px;left:0px'/>
 </div>
 
 <div class='scrollblock' id='page5'>
