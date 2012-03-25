@@ -24,13 +24,17 @@
       start:1,
       end:0
     });
+
+	// animate the parallaxing
+	scrollorama.animate('#date',{ delay: 0, duration: 400, property:'top', start:320, end:-520 });
+
   });
 </script>
 
 <div class='scrollblock' id='page1'>
 	<div style='position:absolute; top:90px; width:100%; text-align:center;'>
-	  <img src="pics/cake.png" style='position:relative;' float:left;>
-	<h1> APRIL 8</H1>
+		<img src="pics/cake.png" style='position:relative;'>
+		<h1 id="date" style='position:absolute;'>APRIL 8</H1>
 	</div>
 </div>
 
