@@ -26,39 +26,48 @@
       end:0
     });
 
-	// animate the parallaxing
-	scrollorama.animate('#date',{ delay: 0, duration: 400, property:'top', start:320, end:0 });
-	scrollorama.animate('#cake1',{ delay: 0, duration: 500, property:'top', start:0, end:-520 });
-	scrollorama.animate('#cake2',{ delay: 0, duration: 500, property:'top', start:820, end:-520 });
-	scrollorama.animate('#cake3',{ delay: 20, duration: 600, property:'top', start:820, end:-520 });
-	scrollorama.animate('#balloon4',{ delay: 0, duration: 600, property:'top', start:820, end:-500 });
-	scrollorama.animate('#balloon3',{ delay:20, duration: 600, property:'top', start:820, end:-950 });
-	scrollorama.animate('#balloon2',{ delay: 0, duration: 500, property:'top', start:820, end:-1700 });
-	scrollorama.animate('#balloon1',{ delay: 0, duration: 500, property:'top', start:820, end:-1800 });
-	
-	scrollorama.animate('#song',{ delay: 450, duration: 150, property:'opacity', start:0 });	
-	
+  // animate the parallaxing
+  scrollorama.animate('#date',{ delay: 0, duration: 400, property:'top', start:320, end:0 });
+  scrollorama.animate('#cake1',{ delay: 0, duration: 500, property:'top', start:0, end:-520 });
+  scrollorama.animate('#cake2',{ delay: 0, duration: 500, property:'top', start:820, end:-520 });
+  scrollorama.animate('#cake3',{ delay: 20, duration: 600, property:'top', start:820, end:-520 });
+  scrollorama.animate('#balloon4',{ delay: 0, duration: 600, property:'top', start:820, end:-500 });
+  scrollorama.animate('#balloon3',{ delay:20, duration: 600, property:'top', start:820, end:-950 });
+  scrollorama.animate('#balloon2',{ delay: 0, duration: 500, property:'top', start:820, end:-1700 });
+  scrollorama.animate('#balloon1',{ delay: 0, duration: 500, property:'top', start:820, end:-1800 });
 
-	
-	
+  scrollorama.animate('#song',{ delay: 450, duration: 150, property:'opacity', start:0, end: 1.0 });  
+
+    $('#videocover').hover(function() {
+        $('#videocover').css('display', 'none');
+      }, function () {
+        //$('#videocover').css('display', 'block');
+      });
+
+    $('#video').hover(function() {
+        //$('#video').css('display', 'none');
+      }, function () {
+        $('#videocover').css('display', 'block');
+      });
 
   });
+
 </script>
 
 <div class='scrollblock' id='page1'>
-	<div style='position:absolute; top:90px; width:100%; text-align:center;'>
-		<img id="cake1" src="pics/cake.png" style='position:relative;'>
-		<h1 id="date" style='position:absolute;'>APRIL 8</H1>
-	</div>
-	
-	<div style='text-align:left; padding-left:80px;'>
-		<img id="cake2" src="pics/cake2.png" style='position:relative;'>
-	</div>
-	
-	<div style='text-align:right; padding-right:80px;'>
-		<img id="cake3" src="pics/cake3.png" style='position:relative;'>
-	</div>
-	
+  <div style='position:absolute; top:90px; width:100%; text-align:center;'>
+    <img id="cake1" src="pics/cake.png" style='position:relative;'>
+    <h1 id="date" style='position:absolute;'>APRIL 8</H1>
+  </div>
+
+  <div style='text-align:left; padding-left:80px;'>
+    <img id="cake2" src="pics/cake2.png" style='position:relative;'>
+  </div>
+
+  <div style='text-align:right; padding-right:80px;'>
+    <img id="cake3" src="pics/cake3.png" style='position:relative;'>
+  </div>
+
 </div>
 
 <div class='scrollblock' id='page2'>
@@ -66,8 +75,8 @@
 </div>
 
 <div class='scrollblock' id='page3'>
-	<h2 id="song" style='position:absolute;top:40px;'>A song for you</h2>
-	
+  <h2 id="song" style='position:absolute;top:40px;'>A song for you</h2>
+
   <div id='videocontainercontainer'>
     <div id='videocontainer'>
       <div id='videocover'>
@@ -108,26 +117,36 @@
 <div class='scrollblock' id='page7'>
   <h1>HAPPY<br>BIRTHDAY<br>DAWN</h1>
 
-	<div style='text-align:left; padding-left:80px;'>
-		<img id="balloon4" src="pics/balloon4.png" style='position:relative;'>
-	</div>
-	
-	<div style='text-align:right; padding-right:80px;'>
-		<img id="balloon3" src="pics/balloon3.png" style='position:relative;'>
-	</div>
-	
-	<div style='text-align:left; padding-left:200px;'>
-		<img id="balloon2" src="pics/balloon2.png" style='position:relative;'>
-	</div>
+  <div style='text-align:left; padding-left:80px;'>
+    <img id="balloon4" src="pics/balloon4.png" style='position:relative;'>
+  </div>
 
-	<div style='text-align:right; padding-right:300px;'>
-		<img id="balloon1" src="pics/balloon1.png" style='position:relative;'>
-	</div>
+  <div style='text-align:right; padding-right:80px;'>
+    <img id="balloon3" src="pics/balloon3.png" style='position:relative;'>
+  </div>
 
+  <div style='text-align:left; padding-left:200px;'>
+    <img id="balloon2" src="pics/balloon2.png" style='position:relative;'>
+  </div>
+
+  <div style='text-align:right; padding-right:300px;'>
+    <img id="balloon1" src="pics/balloon1.png" style='position:relative;'>
+  </div>
 
 </div>
 
 <script src='js/less-1.3.0.min.js'></script>
+<script>
+  // Get element holding the video (embed or object)
+  var player = document.getElementById("video");
+
+  //Create a simple function and check if player exists
+  function play() {
+      if(player) {
+          player.playVideo();
+      }
+  }
+</script>
 
 </body>
 <html>
