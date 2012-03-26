@@ -11,7 +11,7 @@
 @block-height: 620px;
 
 body {
-  background: @orange;
+  background: @lightbeige;
   font-family: 'Crimson Text', 'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 26px;
@@ -57,6 +57,22 @@ h3 {
   vertical-align: bottom;
 }
 
+.fake-scrollblock {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: @block-height;
+  text-align: center;
+
+  &#page3 {
+    background: @orange;
+  }
+
+  &#page4 {
+  }
+}
+
 .scrollblock {
   overflow: hidden;
   position: relative;
@@ -65,19 +81,16 @@ h3 {
   height: @block-height;
   text-align: center;
 
+  &#pinned-block {
+    height: @block-height * 2;
+  }
+
   &#page1 {
     background: @blue;
   }
 
   &#page2 {
     background: @lightgrey;
-  }
-
-  &#page3 {
-    background: @orange;
-  }
-
-  &#page4 {
   }
 
   &#page5 {

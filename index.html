@@ -33,8 +33,8 @@
     scrollorama.animate('#cake1',{ delay: 0, duration: 500, property:'top', start:0, end:-520 });
     scrollorama.animate('#cake2',{ delay: 0, duration: 500, property:'top', start:820, end:-520 });
     scrollorama.animate('#cake3',{ delay: 20, duration: 600, property:'top', start:820, end:-520 });
-    scrollorama.animate('#balloon4',{ delay: 0, duration: 600, property:'top', start:820, end:-500 });
-    scrollorama.animate('#balloon3',{ delay:20, duration: 600, property:'top', start:820, end:-950 });
+    scrollorama.animate('#balloon4',{ delay: 0, duration: 400, property:'top', start:820, end:-850 });
+    scrollorama.animate('#balloon3',{ delay:20, duration: 400, property:'top', start:820, end:-1200 });
     scrollorama.animate('#balloon2',{ delay: 0, duration: 500, property:'top', start:820, end:-1700 });
     scrollorama.animate('#balloon1',{ delay: 0, duration: 500, property:'top', start:820, end:-1800 });
 
@@ -75,7 +75,9 @@
   <img src="pics/umbrella.jpg" width=100% style='position:absolute;top:-250px;left:0px'/>
 </div>
 
-<div class='scrollblock' id='page3'>
+<div class='scrollblock' id='pinned-block'>
+
+<div class='fake-scrollblock' id='page3'>
   <h2 id="song" style='position:absolute;top:40px;'>Play me</h2>
   <div id='videocontainercontainer'>
     <div id='videocontainer'>
@@ -95,8 +97,10 @@
   </div>
 </div>
 
-<div class='scrollblock' id='page4'>
+<div class='fake-scrollblock' id='page4'>
   <img src="pics/oysters.jpg" width=100% style='position:absolute;top:-100px;left:0px'/>
+</div>
+
 </div>
 
 <div class='scrollblock' id='page5'>
